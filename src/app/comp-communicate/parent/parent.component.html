@@ -1,0 +1,11 @@
+<p>parent works!</p>
+<p>Sending data from Parent to Child</p>
+<app-child [customColor]="colorInfo"></app-child>
+
+<p>Receiving data from Child to Parent </p>
+<app-child (newItemEvent)="addItem($event)"></app-child>
+<div style="background-color: beige;">
+<ul>
+    <li *ngFor="let item of items">{{item}}</li>
+</ul>
+</div>

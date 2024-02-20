@@ -14,6 +14,13 @@ export class AuthService {
       return result;
 
     }
+    IsLoggedIn() {
+      return localStorage.getItem('token') !=null;
+    }
+    getToken() {
+      return 'TestToken';
+    }
   }
+
 
 
