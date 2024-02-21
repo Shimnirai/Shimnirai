@@ -7,10 +7,14 @@ import { Component } from '@angular/core';
 })
 export class SampleComponent {
   Name: string = 'Shimnirai';
-
-  addName(newName: string){
-    this.Name=newName;
+  
+  
+  Subjects = ['Maths','Angular','Eng'];
+  
+  AllSubjects(sub: string) {
+    this.Subjects.push(sub);
   }
- 
+
+  
 
 }

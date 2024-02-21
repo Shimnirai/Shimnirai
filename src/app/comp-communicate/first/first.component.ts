@@ -10,10 +10,7 @@ import { ComponentInteractService } from '../component-interact.service';
 export class FirstComponent {
   constructor(private compoInteractservice:ComponentInteractService) {}
   Communi = new FormGroup({
-    username : new FormControl('',[
-      Validators.required,
-      Validators.minLength(3),
-    ]),
+    username : new FormControl('',[Validators.required,Validators.minLength(3)]),
   });
 
   SendMessage(){

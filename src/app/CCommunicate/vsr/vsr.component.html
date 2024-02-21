@@ -1,1 +1,9 @@
+
+<div class="offset-lg-3 col-lg-6" style="margin-top: 5%;background-color: pink;text-align: center;padding: 10px;">
 <p>Message from parent: {{ListOfNames}}</p>
+
+<div class="subject" style="font-weight: 600;"><label for="dif-subjects">Subjects:</label></div>
+<input type="text" id="dif-subjects" #sub>
+<br />
+<div class="list" style="margin: 10px;"><button type="button" (click)="add(sub.value)">Add to list</button></div>
+</div>

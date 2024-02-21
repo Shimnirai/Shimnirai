@@ -16,7 +16,7 @@ const routes: Routes = [
     { path: 'ContentProjection', component: TopLayerComponent },
     { path: 'ComponentCommunication', component: ComponentInteractComponent },
     { path: 'ParentToChild', component: ParentComponent},
-    { path: 'ParentToChild', component: SampleComponent },
+    { path: 'ParentToChild1', component: SampleComponent },
 
 ];
 @NgModule({

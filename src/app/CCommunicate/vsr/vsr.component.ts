@@ -8,4 +8,12 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class VsrComponent {
   @Input () ListOfNames!: string;
 
+  @Output() addList = new EventEmitter<string>();
+
+
+  addnewsub(value: string) {
+    this.addList.emit(value);
+  }
+
+
 }
