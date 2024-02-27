@@ -7,6 +7,7 @@ import { ComponentInteractComponent } from './comp-communicate/component-interac
 import { ParentComponent } from './comp-communicate/parent/parent.component';
 import { SampleComponent } from './CCommunicate/sample/sample.component';
 import { RouterModule, Routes } from '@angular/router';
+import { AddnewComponent } from './addnew/addnew.component';
 
 const routes: Routes = [
     { path: '', component: LoginComponent },
@@ -17,7 +18,9 @@ const routes: Routes = [
     { path: 'ComponentCommunication', component: ComponentInteractComponent },
     { path: 'ParentToChild', component: ParentComponent},
     { path: 'ParentToChild1', component: SampleComponent },
+    { path: 'app-addnew', component: AddnewComponent },
 
+    
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -11,7 +11,7 @@ export class VsrComponent {
   @Output() addList = new EventEmitter<string>();
 
 
-  addnewsub(value: string) {
+  add(value: string) {
     this.addList.emit(value);
   }
 

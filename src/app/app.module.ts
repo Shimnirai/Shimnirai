@@ -18,6 +18,7 @@ import { ParentComponent } from './comp-communicate/parent/parent.component';
 import { ChildComponent } from './comp-communicate/child/child.component';
 import { SampleComponent } from './CCommunicate/sample/sample.component';
 import { VsrComponent } from './CCommunicate/vsr/vsr.component';
+import { AddnewComponent } from './addnew/addnew.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { VsrComponent } from './CCommunicate/vsr/vsr.component';
     ChildComponent,
     SampleComponent,
     VsrComponent,
+    AddnewComponent
   
   ],
   imports: [

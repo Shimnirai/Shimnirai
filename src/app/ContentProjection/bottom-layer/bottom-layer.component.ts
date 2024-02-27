@@ -23,19 +23,19 @@ export class BottomLayerComponent {private firstNumber!: number;
 
   public ProceedLogin():void {
     if(this.Login.valid){
-      this.auth.CheckLogin(this.Login.value).subscribe((response: any) => {
-        console.log(response);
+      // this.auth.CheckLogin(this.Login.value).subscribe((response: any) => {
+      //   console.log(response);
 
-      });
+    
       console.log('Inside Login function');
-
     }
-    else{
+    else {
       console.log('Login Fail')
     }
 
+  
+
+
+
   }
-
-
 }
-
