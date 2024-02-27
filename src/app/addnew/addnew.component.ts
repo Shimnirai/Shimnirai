@@ -43,5 +43,8 @@ export class AddnewComponent {
   get email(){
     return this.register.get('email');
   }
+  get code() {
+    return this.register.get('id');
+  }
 
 }
