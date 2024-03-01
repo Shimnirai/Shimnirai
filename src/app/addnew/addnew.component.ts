@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CustomerService } from '../customer.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { CustomerInfo } from '../customer-info';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-addnew',
@@ -15,7 +16,13 @@ export class AddnewComponent {
   customerId!: number;
   editdata: any;
 
-  constructor(private custService: CustomerService) {}
+  constructor(private custService: CustomerService,private route: ActivatedRoute) {
+    const idParam = this.route.snapshot.paramMap.get('id');
+    this.customerId = idParam ? parseInt(idParam) : 0;
+    if (this.customerId > 0) {
+      this.UpdateCustomer(this.customerId);
+    }
+  }
 
   register = new FormGroup({
     id: new FormControl({ value: '', disabled: true}),
@@ -42,6 +49,22 @@ export class AddnewComponent {
   }
   get email(){
     return this.register.get('email');
+  }
+  get code() {
+    return this.register.get('id');
+  }
+
+  UpdateCustomer(Id: number) {
+    this.custService.LoadCustomerbycode(Id).subscribe((data) => {
+    this.editdata = data;
+    this.register = new FormGroup({
+      id: new FormControl(this.editdata.id),
+      name: new FormControl(this.editdata.firstname),
+      email: new FormControl(this.editdata.email),
+      phone: new FormControl(this.editdata.phone)
+    });
+
+    }); 
   }
 
 }

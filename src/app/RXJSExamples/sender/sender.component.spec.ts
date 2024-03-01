@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BasicComponent } from './basic.component';
+import { SenderComponent } from './sender.component';
 
-describe('BasicComponent', () => {
-  let component: BasicComponent;
-  let fixture: ComponentFixture<BasicComponent>;
+describe('SenderComponent', () => {
+  let component: SenderComponent;
+  let fixture: ComponentFixture<SenderComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [BasicComponent]
+      declarations: [SenderComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(BasicComponent);
+    fixture = TestBed.createComponent(SenderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

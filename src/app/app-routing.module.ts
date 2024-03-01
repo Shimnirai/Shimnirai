@@ -8,6 +8,11 @@ import { ParentComponent } from './comp-communicate/parent/parent.component';
 import { SampleComponent } from './CCommunicate/sample/sample.component';
 import { RouterModule, Routes } from '@angular/router';
 import { AddnewComponent } from './addnew/addnew.component';
+import { ListingComponent } from './listing/listing.component';
+import { ObservableExComponent } from './observable-ex/observable-ex.component';
+import { SenderComponent } from './RXJSExamples/sender/sender.component';
+import { PrimeTestComponent } from './WebWorker/prime-test/prime-test.component';
+import { ProductsComponent } from './Productpage/products/products.component';
 
 const routes: Routes = [
     { path: '', component: LoginComponent },
@@ -18,7 +23,12 @@ const routes: Routes = [
     { path: 'ComponentCommunication', component: ComponentInteractComponent },
     { path: 'ParentToChild', component: ParentComponent},
     { path: 'ParentToChild1', component: SampleComponent },
-    { path: 'app-addnew', component: AddnewComponent },
+    { path: 'Edit/:id', component: AddnewComponent },
+    { path: 'CustomerList', component: ListingComponent },
+    { path: 'Observables', component: SenderComponent },
+    { path: 'WebWorker', component: PrimeTestComponent },
+    { path: 'Products', component: ProductsComponent },
+
 
     
 ];

@@ -19,6 +19,14 @@ import { ChildComponent } from './comp-communicate/child/child.component';
 import { SampleComponent } from './CCommunicate/sample/sample.component';
 import { VsrComponent } from './CCommunicate/vsr/vsr.component';
 import { AddnewComponent } from './addnew/addnew.component';
+import { ListingComponent } from './listing/listing.component';
+// import { ObservableExComponent } from './observable-ex/observable-ex.component';
+import { SenderComponent } from './RXJSExamples/sender/sender.component';
+import { Receiver1Component } from './RXJSExamples/receiver1/receiver1.component';
+import { Receiver2Component } from './RXJSExamples/receiver2/receiver2.component';
+// import { WebworkerComponent } from './WebWorker/webworker/webworker.component';
+import { PrimeTestComponent } from './WebWorker/prime-test/prime-test.component';
+import { ProductsComponent } from './Productpage/products/products.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +44,14 @@ import { AddnewComponent } from './addnew/addnew.component';
     ChildComponent,
     SampleComponent,
     VsrComponent,
-    AddnewComponent
+    AddnewComponent,
+    ListingComponent,
+    SenderComponent,
+    Receiver1Component,
+    Receiver2Component,
+    PrimeTestComponent,
+    ProductsComponent
+    // ObservableExComponent
   
   ],
   imports: [
