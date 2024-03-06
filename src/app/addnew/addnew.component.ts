@@ -53,5 +53,16 @@ export class AddnewComponent {
   get code() {
     return this.register.get('id');
   }
+  UpdateCustomer(Id: number) {
+    this.custService.LoadCustomerbycode(Id).subscribe((data) => {
+      this.editdata = data;
+      this.register = new FormGroup({
+        id: new FormControl(this.editdata.id),
+        name: new FormControl(this.editdata.firstName),
+        email: new FormControl(this.editdata.email),
+        phone: new FormControl(this.editdata.phone),
+      });
+    });
+  }
 
 }

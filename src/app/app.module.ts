@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { PipeExComponent } from './pipe-ex/pipe-ex.component';
 import { LowerPipe } from './shared/lower.pipe';
@@ -27,6 +27,8 @@ import { Receiver2Component } from './RXJSExamples/receiver2/receiver2.component
 // import { WebworkerComponent } from './WebWorker/webworker/webworker.component';
 import { PrimeTestComponent } from './WebWorker/prime-test/prime-test.component';
 import { ProductsComponent } from './Productpage/products/products.component';
+import { RecipeComponent } from './RecipePage/recipe/recipe.component';
+import { DataCheckerComponent } from './TwoWayDataBinding/data-checker/data-checker.component';
 
 @NgModule({
   declarations: [
@@ -50,13 +52,18 @@ import { ProductsComponent } from './Productpage/products/products.component';
     Receiver1Component,
     Receiver2Component,
     PrimeTestComponent,
-    ProductsComponent
+    ProductsComponent,
+    RecipeComponent,
     // ObservableExComponent
+    DataCheckerComponent
   
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule,HttpClientModule, AppRoutingModule
+    ReactiveFormsModule,
+    HttpClientModule,
+     AppRoutingModule,
+     FormsModule
   ],
 
   bootstrap: [AppComponent]

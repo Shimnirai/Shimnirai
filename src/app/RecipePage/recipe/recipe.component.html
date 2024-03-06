@@ -1,0 +1,56 @@
+<div class="card-box">
+    <div class="row">
+        <div class="col-sm-4">
+            <button routerLink="" id="addbtn" class="btn btn-success btn-rounded">Add New</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover table-striped table-dark table-sm">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Ingredients</th>
+                        <th>Instructions</th>
+                        <th>PrepTimeMinutes</th>
+                        <th>CookTimeMinutes</th>
+                        <th>Servings</th>
+                        <th>Difficulty</th>
+                        <th>Cuisine</th>
+                        <th>CaloriesPerServing</th>
+                        <th>Tags</th>
+                        <th>UserId</th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of RecipeData">
+                        <td>{{item.id}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.ingredients}}</td>
+                        <td>{{item.instructions}}</td>
+                        <td>{{item.prepTimeMinutes}}</td>
+                        <td>{{item.cookTimeMinutes}}</td>
+                        <td>{{item.servings}}</td>
+                        <td>{{item.difficulty}}</td>
+                        <td>{{item.cuisine}}</td>
+                        <td>{{item.caloriesPerServing}}</td>
+                        <td>{{item.tags}}</td>
+                        <td>{{item.userId}}</td>
+
+
+
+                        <td>
+                            <button routerLink="/Edit/{{item.id}}" class="btn btn-primary">Edit</button>
+                            <!-- <button (click)="delete(item.id)" class="btn btn-danger">Delete</button> --> -->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div> 
+</div>
+
+

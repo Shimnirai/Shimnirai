@@ -13,6 +13,8 @@ import { ObservableExComponent } from './observable-ex/observable-ex.component';
 import { SenderComponent } from './RXJSExamples/sender/sender.component';
 import { PrimeTestComponent } from './WebWorker/prime-test/prime-test.component';
 import { ProductsComponent } from './Productpage/products/products.component';
+import { DataCheckerComponent } from './TwoWayDataBinding/data-checker/data-checker.component';
+import { RecipeComponent } from './RecipePage/recipe/recipe.component';
 
 const routes: Routes = [
     { path: '', component: LoginComponent },
@@ -28,6 +30,9 @@ const routes: Routes = [
     { path: 'Observables', component: SenderComponent },
     { path: 'WebWorker', component: PrimeTestComponent },
     { path: 'Products', component: ProductsComponent },
+    { path: 'TwoWayDataBinding', component: DataCheckerComponent },
+    { path: 'Recipe', component: RecipeComponent },
+
 
 
     
