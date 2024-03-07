@@ -29,6 +29,7 @@ import { PrimeTestComponent } from './WebWorker/prime-test/prime-test.component'
 import { ProductsComponent } from './Productpage/products/products.component';
 import { RecipeComponent } from './RecipePage/recipe/recipe.component';
 import { DataCheckerComponent } from './TwoWayDataBinding/data-checker/data-checker.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { DataCheckerComponent } from './TwoWayDataBinding/data-checker/data-chec
     ProductsComponent,
     RecipeComponent,
     // ObservableExComponent
-    DataCheckerComponent
+    DataCheckerComponent,
+    NotFoundComponent
   
   ],
   imports: [

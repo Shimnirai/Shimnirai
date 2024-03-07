@@ -15,10 +15,11 @@ import { PrimeTestComponent } from './WebWorker/prime-test/prime-test.component'
 import { ProductsComponent } from './Productpage/products/products.component';
 import { DataCheckerComponent } from './TwoWayDataBinding/data-checker/data-checker.component';
 import { RecipeComponent } from './RecipePage/recipe/recipe.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
-    { path: '', component: LoginComponent },
-    { path: 'login', component: LoginComponent },
+  { path: '', component: LoginComponent },
+  { path: 'login', component: LoginComponent },
     { path: 'Pipes', component: PipeExComponent },
     { path: 'Customer', component: CustomerComponent },
     { path: 'ContentProjection', component: TopLayerComponent },
@@ -32,10 +33,7 @@ const routes: Routes = [
     { path: 'Products', component: ProductsComponent },
     { path: 'TwoWayDataBinding', component: DataCheckerComponent },
     { path: 'Recipe', component: RecipeComponent },
-
-
-
-    
+    { path: '**', component: NotFoundComponent },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

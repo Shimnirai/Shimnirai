@@ -10,14 +10,15 @@ export class PrimeTestComponent {
   InitialValue!: number;
 
   LoadHeavyComp() {
+    this.InitialValue = 777;
     if (typeof Worker !== 'undefined') {
       const worker = new Worker(new URL('app.worker', import.meta.url));
-      worker.postMessage(100000);
+      worker.postMessage(20000);
       worker.onmessage = ({ data }) => {
         this.result = data.prime;
       };
     } else {
-      
+
     }
   }
 
