@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import { LoginDetails } from '../login-details';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,7 @@ export class LoginComponent {
   private responsedata: any;
   
 
-  constructor(private auth:AuthService) { }
+  constructor(private auth:AuthService, private route: Router) { }
 
   Login = new FormGroup({
     username: new FormControl('',[Validators.required,Validators.minLength(3)]),
@@ -31,8 +32,14 @@ export class LoginComponent {
         password: this.Login.value.password!
       };
 
-      this.auth.CheckLogin(loginOb).subscribe((response: any) => {
-        console.log(response);
+      this.auth.CheckLogin(loginOb).subscribe((data: any) => {
+        if (data != null) {
+          this.responsedata = data;
+          localStorage.setItem('token', this.responsedata.token);
+          localStorage.setItem('Role','Admin');
+          this.route.navigate(['CustomerList']);
+        }
+        
       })
       console.log('Login Success');
     }

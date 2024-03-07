@@ -13,6 +13,11 @@ export class ListingComponent {
     this.LoadCustomerData();
   }
 
+  ngOnInit(): void {
+    console.log("ngOnInit");
+    this.LoadCustomerData();
+  }
+
   private LoadCustomerData(){
     this.service.LoadCustomer().subscribe((data) => {
       this.Customerdata = data.users;
@@ -27,6 +32,10 @@ export class ListingComponent {
         }
       });
     }
+  }
+
+  ngOnDestroy(){
+    console.log("ngOnDestroy");
   }
 
 }
