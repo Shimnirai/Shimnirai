@@ -14,10 +14,12 @@ export class LoginComponent {
   private secondNumber: number = 100;
   private result!: string;
   public resultArr: string[] = ['Shimni Rai','Pavithra', 'Hope Tutors'];
-  private responsedata: any;
+  private responseData: any;
   
 
-  constructor(private auth:AuthService, private route: Router) { }
+  constructor(private auth:AuthService, private route: Router) {
+    localStorage.clear();
+   }
 
   Login = new FormGroup({
     username: new FormControl('',[Validators.required,Validators.minLength(3)]),
@@ -34,8 +36,8 @@ export class LoginComponent {
 
       this.auth.CheckLogin(loginOb).subscribe((data: any) => {
         if (data != null) {
-          this.responsedata = data;
-          localStorage.setItem('token', this.responsedata.token);
+          this.responseData = data;
+          localStorage.setItem('token', this.responseData.token);
           localStorage.setItem('Role','Admin');
           this.route.navigate(['CustomerList']);
         }

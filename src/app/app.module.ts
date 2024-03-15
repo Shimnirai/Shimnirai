@@ -30,6 +30,8 @@ import { ProductsComponent } from './Productpage/products/products.component';
 import { RecipeComponent } from './RecipePage/recipe/recipe.component';
 import { DataCheckerComponent } from './TwoWayDataBinding/data-checker/data-checker.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { CartsComponent } from './cartsPage/carts/carts.component';
+import { JsonPageComponent } from './JSonPage/json-page/json-page.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +59,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
     RecipeComponent,
     // ObservableExComponent
     DataCheckerComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    CartsComponent,
+    JsonPageComponent
   
   ],
   imports: [
